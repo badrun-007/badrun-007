@@ -1,5 +1,17 @@
 
 
+window.onscroll = function() {myFunction()};
+
+function myFunction() {
+	var winscroll = document.body.scrollTOp || document.documentElement.scrollTop;
+	var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+	var scrolled = (winscroll / height) * 100;
+	document.getElementById('myBar').style.width = scrolled + "%";
+}
+
+
+
+
 $('.page-scroll').on('click', function(){
 	
 	//ambil isi href
