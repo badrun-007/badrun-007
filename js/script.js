@@ -6,7 +6,9 @@ function myFunction() {
 	var winscroll = document.body.scrollTOp || document.documentElement.scrollTop;
 	var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
 	var scrolled = (winscroll / height) * 100;
-	document.getElementById('myBar').style.width = scrolled + "%";
+	var myBar = document.getElementById('myBar');
+	myBar.style.width = scrolled + "%";
+	
 }
 
 
